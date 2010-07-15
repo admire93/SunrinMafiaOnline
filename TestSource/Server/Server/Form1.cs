@@ -16,9 +16,26 @@ namespace Server
         Server server;
         public Main()
         {
-            InitializeComponent();
-            server = new Server();          
-                      
+            InitializeComponent();            
+        }
+
+        private void bt_serv_off_Click(object sender, EventArgs e)
+        {
+            if (server != null)
+            {
+                lb_serv_statue.Text = "Off";
+            }
+            else
+            {
+                MessageBox.Show("서버를 실행시켜 주십시요", "경고", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void bt_serv_on_Click(object sender, EventArgs e)
+        {
+            server = new Server();
+            server.ServerStart();
+            lb_serv_statue.Text = "On";
         }
     }
 }

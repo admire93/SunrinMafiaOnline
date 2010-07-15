@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Net;
 using System.Net.Sockets;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Server
@@ -11,9 +12,10 @@ namespace Server
     class Server
     {
         private int port = 10521;
-        Socket listen_sock;
+        Socket listen_sock,client_sock;        
+        IPEndPoint listen_ip,client_ip;
+        Thread th_client;
         
-        IPEndPoint listen_ip;
         public Server()
         {
             listen_sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -48,7 +50,36 @@ namespace Server
                 MessageBox.Show(e.Message);
             }
         }
+        public void ServerStart()
+        {
+            th_client = new Thread(new ThreadStart(AcceptListen));
+            th_client.IsBackground = true;
+            th_client.Start();
+        }
+        public void ServerStop()
+        {
+        }
 
+        public void AcceptListen()
+        {
+            bind(); listen();
+            Client client;
+            while (true)
+            {
+                try
+                {
+                    client_sock = listen_sock.Accept();
+                    client_ip = (IPEndPoint)client_sock.RemoteEndPoint;
+                    client = new Client(client_sock,client_ip);
+                    th_client = new Thread(new ThreadStart(client.Receive));
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                    break;
+                }
+            }
+        }
        
     }
 }

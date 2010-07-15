@@ -1,0 +1,9 @@
+C:\Documents and Settings\MYHOME\My Documents\Visual Studio 2010\Projects\Server\Server\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\MYHOME\My Documents\Visual Studio 2010\Projects\Server\Server\obj\x86\Debug\Server.Main.resources
+C:\Documents and Settings\MYHOME\My Documents\Visual Studio 2010\Projects\Server\Server\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\MYHOME\My Documents\Visual Studio 2010\Projects\Server\Server\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\MYHOME\My Documents\Visual Studio 2010\Projects\Server\Server\bin\Debug\Server.exe
+C:\Documents and Settings\MYHOME\My Documents\Visual Studio 2010\Projects\Server\Server\bin\Debug\Server.pdb
+C:\Documents and Settings\MYHOME\My Documents\Visual Studio 2010\Projects\Server\Server\obj\x86\Debug\Server.Properties.Resources.resources
+C:\Documents and Settings\MYHOME\My Documents\Visual Studio 2010\Projects\Server\Server\obj\x86\Debug\Server.exe
+C:\Documents and Settings\MYHOME\My Documents\Visual Studio 2010\Projects\Server\Server\obj\x86\Debug\Server.pdb

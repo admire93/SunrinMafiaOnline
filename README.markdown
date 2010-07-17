@@ -19,6 +19,8 @@
 
 ## description
 
- 그딴 거 없 ㅋ 엉 ㅋ
+ [여기][]를 참고하면 된다.
+
+[여기]:http://wiki.github.com/nexusz99/SunrinMafiaOnline
 
 
